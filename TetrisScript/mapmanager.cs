@@ -73,6 +73,8 @@ public class mapmanager : MonoBehaviour
 
     void SetCameraPos() // 카메라 위치를 조정
     {
+        Camera.main.orthographicSize = 0f;
+
         Vector3 aPos = instance._Map[0, 0].transform.position;
         Vector3 bPos = instance._Map[11, 20].transform.position;
         Vector3 Pos = (aPos + bPos) / 2 + new Vector3(0, 0, -10);
